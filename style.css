@@ -1,0 +1,428 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: demon-slayer;
+    src: url(./demon-slayer-font/blood-crow.ttf)
+}
+
+.cursor {
+    background-image: rgba(0, 0, 0, 0.2);
+    margin: 0px;
+    padding: 0px;
+    position: absolute;
+    width: 3rem;
+    height: 3rem;
+    border: solid 1px white;
+    border-radius: 50%;
+    transition-duration: 0.5s;
+    transition-timing-function: linear ease-in-out;
+    transition-property: transform, animation, background-image;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    backdrop-filter: sepia(100%);
+    z-index: 1;
+}
+
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: #ed1c23;
+    cursor: none;
+}
+
+.navbar {
+    display: flex;
+    width: 100%;
+    position: fixed;
+    background-color: black;
+    border-bottom: solid white 2px;
+    height: 70px;
+}
+
+.navbar .menu-container ul {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    list-style: none;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.navbar .menu-container ul li {
+    margin: 10px;
+    padding: 15px 17px;
+    transition: all 0.3s linear ease-in-out;
+}
+
+.navbar .menu-container ul li a {
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: none;
+}
+
+.navbar .menu-container {
+    display: flex;
+    flex: 1;
+    margin-right: 2%;
+}
+
+.navbar .player-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex: 1;
+    margin-left: 1%;
+    background-color: black;
+}
+
+.navbar .logo-container {
+    display: flex;
+    justify-content: flex-end;
+    flex: 3;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+}
+
+#tanjiro {
+    background-image: linear-gradient(to top, rgba(237, 28, 35, 0.70), rgba(0, 0, 0, 0.60)), url('./images/tanjiro.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#nezuko {
+    background-image: linear-gradient(to top, rgba(237, 28, 35, 0.70), rgba(0, 0, 0, 0.60)), url('./images/nezuko.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#zenitsu {
+    background-image: linear-gradient(to top, rgba(237, 28, 35, 0.70), rgba(0, 0, 0, 0.60)), url('./images/zenitsu.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#inosuke {
+    background-image: linear-gradient(to top, rgba(237, 28, 35, 0.65), rgba(0, 0, 0, 0.55)), url('./images/inosuke.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+section h1 {
+    font-size: 5rem;
+    color: white;
+    font-family: demon-slayer;
+    letter-spacing: 1rem;
+    padding: 0px;
+    margin: 0px;
+    margin-top: 70px;
+    flex: 1;
+    text-align: center;
+}
+
+section .text-container {
+    flex: 3;
+    display: grid;
+    grid-template-columns: 1fr 1.7fr;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    gap: 25px;
+    margin: 2% 0%;
+    padding: 0% 10%;
+}
+
+section .text-container img {
+    width: 100%;
+    object-fit: contain;
+}
+
+section .text-container p {
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.05));
+    margin: 25px 0px;
+    padding: 40px;
+    font-size: 1.4rem;
+    line-height: 2.2rem;
+    color: white;
+    transition: all 0.3s linear;
+}
+
+@media (min-width: 300px) and (max-width: 550px) {
+
+    section .text-container {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 10px;
+        justify-items: center;
+        padding: 0% 3%;
+    }
+
+    section .text-container img {
+        display: none;
+        width: 30%;
+        object-fit: contain;
+    }
+
+    section .text-container p {
+        margin: 5px 0px;
+        width: 100%;
+        font-size: 1.0rem;
+        padding: 20px;
+        align-items: center;
+    }
+
+    .navbar {
+        flex-wrap: wrap;
+    }
+
+    .navbar .menu-container {
+        margin-right: 0%;
+    }
+
+    .navbar .logo-container {
+        display: none;
+    }
+
+    .navbar .menu-container ul {
+        justify-content: center;
+        background-color: black;
+    }
+
+    .navbar .player-container {
+        justify-content: center;
+        margin-top: 1%;
+    }
+
+    .navbar .menu-container ul li {
+        margin: 10px;
+        padding: 10px 12px;
+        transition: all 0.3s linear ease-in-out;
+    }
+    
+    .navbar .menu-container ul li a {
+        color: white;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-size: 0.8rem;
+    }
+
+    section h1 {
+        font-size: 4rem;
+        margin-top: 150px;
+    }
+}
+
+@media (max-width: 650px) {
+    section .text-container {
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 10px;
+        justify-items: center;
+    }
+
+    section .text-container img {
+        width: 30%;
+        object-fit: contain;
+    }
+
+    section .text-container p {
+        margin: 10px 0px;
+        width: 100%;
+    }
+
+    .navbar {
+        flex-wrap: wrap;
+    }
+
+    .navbar .menu-container {
+        margin-right: 0%;
+    }
+
+    .navbar .logo-container {
+        display: none;
+    }
+
+    .navbar .menu-container ul {
+        justify-content: center;
+        background-color: black;
+    }
+
+    .navbar .player-container {
+        justify-content: center;
+        margin-top: 1%;
+    }
+
+    section h1 {
+        margin-top: 125px;
+    }
+}
+
+@media (min-width: 651px) and (max-width: 750px) {
+    section .text-container {
+        grid-template-columns: repeat(auto-fit, minmax(550px, 1fr));
+        gap: 10px;
+        justify-items: center;
+    }
+
+    section .text-container img {
+        width: 30%;
+        object-fit: contain;
+    }
+
+    section .text-container p {
+        margin: 10px 0px;
+        width: 100%;
+    }
+
+    .navbar {
+        flex-wrap: wrap;
+    }
+
+    .navbar .menu-container {
+        margin-right: 0%;
+    }
+
+    .navbar .logo-container {
+        display: none;
+    }
+
+    .navbar .menu-container ul {
+        justify-content: center;
+        background-color: black;
+    }
+
+    .navbar .player-container {
+        justify-content: center;
+        margin-top: 1%;
+    }
+
+    section h1 {
+        margin-top: 125px;
+    }
+}
+
+@media (min-width: 751px) and (max-width: 850px) {
+    section .text-container {
+        grid-template-columns: repeat(auto-fit, minmax(650px, 1fr));
+        gap: 10px;
+        justify-items: center;
+    }
+
+    section .text-container img {
+        width: 30%;
+        object-fit: contain;
+    }
+
+    section .text-container p {
+        margin: 10px 0px;
+        width: 100%;
+    }
+
+    .navbar {
+        flex-wrap: wrap;
+    }
+
+    .navbar .menu-container {
+        margin-right: 0%;
+    }
+
+    .navbar .logo-container {
+        display: none;
+    }
+
+    .navbar .menu-container ul {
+        justify-content: center;
+        background-color: black;
+    }
+
+    .navbar .player-container {
+        justify-content: center;
+        margin-top: 1%;
+    }
+
+    section h1 {
+        margin-top: 125px;
+    }
+}
+
+/* Dynamic Classes */
+
+.link-grow {
+    --cursor-background-image: url('./images/tanjiro.png');
+    transform: scale(2) translate(-25%, -25%);
+    background-size: cover;
+    background-position: center;
+    -webkit-animation: 1.2s linear .1s gradient alternate infinite;
+    -moz-animation: 1.2s linear .1s gradient alternate infinite;
+    animation: 1.2s linear .1s gradient alternate infinite;
+}
+
+.hovered-link {
+    color: black;
+}
+
+/* Keyframes */
+
+@keyframes gradient {
+    0% {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), var(--cursor-background-image);
+    }
+
+    10% {
+        background-image: linear-gradient(rgba(255, 255, 255, 0.3), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), var(--cursor-background-image);
+    }
+
+    20% {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(255, 255, 255, 0.3), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), var(--cursor-background-image);
+
+    }
+
+    30% {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3), rgba(255, 255, 255, 0.3), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), var(--cursor-background-image);
+    }
+
+    40% {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3), rgba(255, 255, 255, 0.3), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), var(--cursor-background-image);
+    }
+
+    50% {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3), rgba(255, 255, 255, 0.3), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), var(--cursor-background-image);
+    }
+
+    60% {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3), rgba(255, 255, 255, 0.3), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), var(--cursor-background-image);
+    }
+    
+    70% {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3), rgba(255, 255, 255, 0.3), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), var(--cursor-background-image);
+    }
+
+    80% {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3), rgba(255, 255, 255, 0.3), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), var(--cursor-background-image);
+    }
+
+    90% {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3), rgba(255, 255, 255, 0.3), rgba(0, 0, 0, 0.3)), var(--cursor-background-image);
+    }
+
+    100% {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3), rgba(255, 255, 255, 0.3)), var(--cursor-background-image);
+    }
+}
+
+
+
+

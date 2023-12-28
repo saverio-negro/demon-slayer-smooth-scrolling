@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Demon Slayer Web Cards</title>
+</head>
+<body>
+    <div class="cursor"></div>
+    <div id="container">
+        <nav class="navbar">
+            <div class="player-container">
+                <audio class="player" loop="true" src="./audio/gurenge.mp3" controls></audio>
+            </div>
+            <div class="logo-container">
+                <img src="./images/demon-slayer-logo.webp" alt="demon slayer logo">
+            </div>
+            <div class="menu-container">
+                <ul>
+                    <li><a data-page="0" href="#tanjiro">Tanjiro</a></li>
+                    <li><a data-page="1" href="#nezuko">Nezuko</a></li>
+                    <li><a data-page="2" href="#zenitsu">Zenitsu</a></li>
+                    <li><a data-page="3" href="#inosuke">Inosuke</a></li>
+                </ul>
+            </div>
+        </nav>
+        <main>
+            <section data-index="0" id="tanjiro" class="card">
+                <h1>Tanjiro</h1>
+                <div class="text-container">
+                    <img src="./images/tanjiro_2.png" alt="Tanjiro">
+                    <p>Tanjiro Kamado, the determined protagonist of Demon Slayer, possesses an unwavering sense of kindness and compassion, coupled with an unyielding determination to protect others at any cost. His journey is marked by resilience, growth, and an unbreakable spirit in the face of adversity.</p>
+                </div>
+            </section>
+            
+            <section data-index="1" id="nezuko" class="card">
+                <h1>Nezuko</h1>
+                <div class="text-container">
+                    <img src="./images/nezuko_2.png" alt="Nezuko">
+                    <p>Nezuko Kamado, Tanjiro's younger sister, undergoes a profound transformation after becoming a demon, retaining her humanity and showcasing immense strength and loyalty. Her silent yet powerful demeanor and her unwavering dedication to her brother make her an endearing and integral character in Demon Slayer.</p>
+                </div>
+            </section>
+            
+            <section data-index="2" id="zenitsu" class="card">
+                <h1>Zenitsu</h1>
+                <div class="text-container">
+                    <img src="./images/zenitsu_2.png" alt="Zenitsu">
+                    <p>Zenitsu Agatsuma, a member of the Demon Slayer Corps, is initially portrayed as fearful and insecure but exhibits incredible lightning-based abilities when pushed to his limits, showcasing both cowardice and immense bravery within the same character. His comedic antics and intense moments of valor create a unique and multifaceted personality that adds depth to the series.</p>
+                </div>
+            </section>
+            
+            <section data-index="3" id="inosuke" class="card">
+                <h1>Inosuke</h1>
+                <div class="text-container">
+                    <img src="./images/inosuke_2.png" alt="Inosuke">
+                    <p>Inosuke Hashibira, an aggressive and wild-spirited member of the Demon Slayer Corps, thrives on instinct and brute strength, often preferring to charge headfirst into battles with his fierce dual-wielding style. Despite his rough exterior and initial abrasiveness, his loyalty, determination, and underlying vulnerability gradually shine through, making him an intriguing and multifaceted character in Demon Slayer.</p>
+                </div>
+            </section>
+        </main>
+
+        <!-- External JS Libraries -->
+        <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
+
+        <!-- JS Scripts -->
+        <script src="./app.js"></script>
+    </div>
+</body>
+</html>
