@@ -1,5 +1,7 @@
 # Demon Slayer Smooth Scrolling
 
+<img src="./images/demon-slayer.jpeg" width="50%" height="50%" />
+
 <p>Demon Slayer Smooth Scrolling is a project I dedicated quite a great amount of effort towards.</p>
 
 <p>It essentially uses two handful API's in order to significantly amplify the UX (User Experience).</p>
